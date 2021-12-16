@@ -2,7 +2,8 @@
 export PYTHONPATH=/Savior/
 if [ -f /Savior/docker/firstrun ]; then
     . /Savior/.env
-    if [ "$DB_HOST" != "mysql" ]; then
+    #DB_HOST is a IP address
+    if [[ "$DB_HOST" =~ ^([0-9]{1,3}.){3}[0-9]{1,3}$ ]]; then
         echo -e "$DB_HOST\tmysql" >> /etc/hosts
     fi
     /Savior/docker/wait-for-it.sh -t 0 mysql:3306
