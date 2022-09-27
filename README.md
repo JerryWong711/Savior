@@ -1,6 +1,5 @@
 <div align="center">
-
-# 🍋 Savior 渗透测试报告自动生成工具  
+# 🍋 Savior 渗透测试报告自动生成工具   
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](./LICENSE)
 [![](https://img.shields.io/badge/python-3.5+-yellow.svg)](https://www.python.org/)
@@ -10,7 +9,13 @@
 
  </div>
  
-##  😘方便的话麻烦各位老板给个😘star!
+## 重要更新，修复nginx配置错误导致任意文件读取。
+
+进入容器内，修改/etc/nginx/sites-enabled/savior.conf文件如下：
+
+https://github.com/Mustard404/Savior/blob/b72151d6adaa9bf12e284198e0b0b11fb80d6341/docker/savior.conf#L27-L29 
+
+感谢[signfind](https://github.com/signfind)反馈。
 
 ##  🛠 作者
 
